@@ -87,12 +87,12 @@ export function HomeView({ data, self, myCustomers, canAddAgents, go }) {
         )}
       </div>
 
-      <div className="grid gap-3 lg:grid-cols-2">
+      <div className="grid w-full min-w-0 gap-3 lg:grid-cols-2">
         <button onClick={() => go("customers", { title: "Customers" })} className="soft-transition card flex w-full items-center gap-4 p-4 text-left hover:-translate-y-0.5 hover:shadow-md active:scale-[0.99]">
           <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#F3F4F6]"><Users size={20} className="text-[#374151]" /></div>
           <div className="min-w-0 flex-1">
             <div className="font-semibold text-[#000000]">Customers</div>
-            <div className="mt-0.5 truncate text-xs text-[#6B7280]">{myCustomers.length} customers - {fmtMoney(dueThisMonthAmt)} to collect this month - {fmtMoney(totalPaidAllTime)} collected</div>
+            <div className="mt-0.5 w-full truncate text-xs text-[#6B7280]">{myCustomers.length} customers · {fmtMoney(dueThisMonthAmt)} to collect · {fmtMoney(totalPaidAllTime)} collected</div>
           </div>
           <ChevronRight size={18} className="shrink-0 text-[#9CA3AF]" />
         </button>
@@ -102,7 +102,7 @@ export function HomeView({ data, self, myCustomers, canAddAgents, go }) {
             <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#F3F4F6]"><ShieldCheck size={20} className="text-[#374151]" /></div>
             <div className="min-w-0 flex-1">
               <div className="font-semibold text-[#000000]">Team reports</div>
-              <div className="mt-0.5 truncate text-xs text-[#6B7280]">{data.agents.length} agents - {teamReportedCount} reported - {fmtMoney(teamReportedTotal)} this month</div>
+              <div className="mt-0.5 w-full truncate text-xs text-[#6B7280]">{data.agents.length} agents · {teamReportedCount} reported · {fmtMoney(teamReportedTotal)} this month</div>
             </div>
             <ChevronRight size={18} className="shrink-0 text-[#9CA3AF]" />
           </button>

@@ -47,10 +47,10 @@ export function TeamsView({ data, update, go, back, showToast }) {
         </div>
 
         <button onClick={() => go("addAgent")} className="soft-transition mb-4 flex w-full items-center justify-center gap-2 rounded-xl border border-[#D1D5DB] bg-white py-3 text-sm font-semibold text-[#000000] hover:border-[#9CA3AF]">
-          <UserPlus size={17} /> Invite agent
+          <UserPlus size={17} /> Add agent
         </button>
 
-        <div className="grid gap-2.5 lg:grid-cols-2">
+        <div className="grid w-full min-w-0 gap-2.5 lg:grid-cols-2">
           {data.agents.map((agent) => {
             const payments = agent.payments || [];
             const thisMonth = payments.filter((payment) => paymentMonth(payment) === monthKey);
@@ -65,7 +65,7 @@ export function TeamsView({ data, update, go, back, showToast }) {
                     <div className="flex items-center gap-1.5 truncate font-semibold text-[#000000]">
                       {agent.name} <RankBadge rank={agent.rank} size="sm" />
                     </div>
-                    <div className="mt-0.5 text-[11px] text-[#6B7280]">
+                    <div className="mt-0.5 w-full truncate text-[11px] text-[#6B7280]">
                       {total > 0 ? `${fmtMoney(total)} this month - ${thisMonth.length} payment(s)` : "No payments this month"}
                     </div>
                   </div>
