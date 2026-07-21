@@ -11,8 +11,9 @@ export const RANK_LABEL = {
 export const RANK_COLOR = {
   LIA: { bg: "#F3F4F6", fg: "#374151", ring: "#D1D5DB" },
   SLIA: { bg: "#F3F4F6", fg: "#374151", ring: "#D1D5DB" },
-  CLIA: { bg: "#F3F4F6", fg: "#374151", ring: "#D1D5DB" },
   DLIA: { bg: "#F3F4F6", fg: "#374151", ring: "#D1D5DB" },
+  CLIA: { bg: "#F3F4F6", fg: "#374151", ring: "#D1D5DB" },
+
 };
 export const MODE_LABEL = { monthly: "Monthly", quarterly: "Quarterly", half: "Half-yearly", yearly: "Yearly" };
 export const MODE_MONTHS = { monthly: 1, quarterly: 3, half: 6, yearly: 12 };
