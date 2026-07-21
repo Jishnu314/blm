@@ -2,7 +2,7 @@
   "name": "my-app",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://jishnu314.github.io/blm",
+  "homepage": "https://jishnu314.github.io/blm/",
   "type": "module",
   "scripts": {
     "dev": "vite",
