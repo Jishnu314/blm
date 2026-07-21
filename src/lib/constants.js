@@ -1,11 +1,12 @@
-export const RANKS = ["LIA", "SLIA", "CLIA", "DLIA"];
-export const RANK_ORDER = { LIA: 1, SLIA: 2, CLIA: 3, DLIA: 4 };
-export const RANK_BELOW = { DLIA: "CLIA", CLIA: "SLIA", SLIA: "LIA", LIA: null };
+export const RANKS = ["LIA", "SLIA", "DLIA", "CLIA"];
+export const RANK_ORDER = { LIA: 1, SLIA: 2, DLIA: 3, CLIA: 4 };
+export const RANK_BELOW = { CLIA: "DLIA", DLIA: "SLIA", SLIA: "LIA", LIA: null };
 export const RANK_LABEL = {
-  LIA: "Life Insurance Agent",
+  LIA: "Land Investment Advisor",
   SLIA: "Senior LIA",
+  DLIA: "Deputy LIA",
   CLIA: "Chief LIA",
-  DLIA: "Divisional LIA",
+  
 };
 export const RANK_COLOR = {
   LIA: { bg: "#F3F4F6", fg: "#374151", ring: "#D1D5DB" },
