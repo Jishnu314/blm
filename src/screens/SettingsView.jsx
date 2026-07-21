@@ -121,11 +121,11 @@ export function SettingsView({ data, update, showToast, onLock }) {
                 <LockKeyhole size={18} className="mt-0.5 text-[#111827]" />
                 <div>
                   <div className="font-semibold text-[#111827]">Username: {self.auth?.username || self.agentIdNumber}</div>
-                  <div className="mt-0.5 text-xs text-[#6B7280]">{self.auth?.passwordHash ? "Secure PIN login is active." : "Legacy 4-digit PIN login is active."}</div>
+                  <div className="mt-0.5 text-xs text-[#6B7280]">{self.auth?.passwordHash ? "Secure PIN login is active." : "Legacy 6-digit PIN login is active."}</div>
                 </div>
               </div>
-              <Field label={self.auth?.passwordHash ? "Current PIN" : "Current 4-digit PIN"}>
-                <input className={`${inputCls} tracking-[0.4em]`} type={showPins ? "text" : "password"} inputMode="numeric" maxLength={self.auth?.passwordHash ? 6 : 4} value={currentPin} onChange={(event) => setCurrentPin(event.target.value.replace(/\D/g, ""))} />
+              <Field label={self.auth?.passwordHash ? "Current PIN" : "Current 6-digit PIN"}>
+                <input className={`${inputCls} tracking-[0.4em]`} type={showPins ? "text" : "password"} inputMode="numeric" maxLength={self.auth?.passwordHash ? 6 : 6} value={currentPin} onChange={(event) => setCurrentPin(event.target.value.replace(/\D/g, ""))} />
               </Field>
               <Field label="New 6-digit PIN">
                 <div className="relative">
