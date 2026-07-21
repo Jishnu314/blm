@@ -68,7 +68,7 @@ export function useCloudStore() {
       active = false;
       supabase.removeChannel(channel);
     };
-  }, [profile?.teamId]);
+  }, [profile?.teamId, authUser]);
 
   const persist = (next) => {
     if (!profile?.teamId) return;

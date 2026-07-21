@@ -124,8 +124,6 @@ export function ReportsView({ data, self }) {
   const exportExcel = async () => {
     const XLSX = await import("xlsx");
     const wb = XLSX.utils.book_new();
-    const monthLabel = fmtMonthYear(monthKey + "-01");
-
     // --- Customers sheet: name, scheme, month, cash, total (grouped, one row per customer) ---
     const customerRows = [
       ["Customer", "Scheme", "Month", "Cash", "Total"],

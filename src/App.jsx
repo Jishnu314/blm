@@ -41,7 +41,7 @@ export default function CollectionLedgerApp() {
 
   // Not logged in — show sign in / create team / join team
   if (!authUser) {
-    return <CloudAuthScreen createTeam={createTeam} logIn={logIn} resetPassword={resetPassword} />;
+    return <CloudAuthScreen createTeam={createTeam} joinTeam={joinTeam} logIn={logIn} resetPassword={resetPassword} />;
   }
 
   // Logged in, but still fetching profile/team data from Firestore
